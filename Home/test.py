@@ -1,2 +1,2 @@
 print("Git test")
-print('other changes')
+print('other')
