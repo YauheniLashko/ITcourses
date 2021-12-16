@@ -1,5 +1,3 @@
-
-
 def calc(num1, num2):
     def oper(par):
         if par == '+':
