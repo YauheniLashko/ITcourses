@@ -16,7 +16,7 @@ class Tomato:
         return self._state
 
 
-class TomatoBush():
+class TomatoBush:
 
     def __init__(self, tomatoes):
         self.tomatoes = tomatoes
