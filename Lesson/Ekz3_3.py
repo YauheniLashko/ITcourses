@@ -28,23 +28,19 @@ class TomatoBush:
             print("Томат растет!")
 
     def all_are_ripe(self):
-        if self.tomatoes == Tomato.states[2]:
-            return True
-        else:
-            return False
-
+        return len(tuple(filter(lambda x: x.is_ripe(), self.tomatoes))) == len(self.tomatoes)
 
 class Gardener:
     def __init__(self, name):
         self.name = name
-        self._plant = Tomato
+        self._plant = TomatoBush(1)
 
     def work(self):
-        TomatoBush(1).grow_all()
+        TomatoBush(self).grow_all()
 
     def harvest(self):
-        TomatoBush(Tomato).all_are_ripe()
-        if TomatoBush(Tomato).all_are_ripe():
+        TomatoBush(self).all_are_ripe()
+        if TomatoBush(self).all_are_ripe():
             print("Все выросло")
         else:
             print("Не все выросло")
